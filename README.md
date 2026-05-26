@@ -6,7 +6,15 @@ Official implementation of the CVPR 2025 paper
 </p>
 
 <p align="center">
-📄 <a href="https://arxiv.org/abs/2503.16970">Paper (arXiv)</a>
+  <a href="https://arxiv.org/abs/2503.16970">
+    <img src="https://img.shields.io/badge/Paper-arXiv-b31b1b?style=for-the-badge&logo=arxiv">
+  </a>
+  <a href="https://huggingface.co/datasets/Liangyingping/DMD3Cpp-checkpoints">
+    <img src="https://img.shields.io/badge/Checkpoints-HuggingFace-yellow?style=for-the-badge&logo=huggingface">
+  </a>
+  <a href="https://huggingface.co/datasets/Liangyingping/DCVerse">
+    <img src="https://img.shields.io/badge/Dataset-DCVerse-blue?style=for-the-badge">
+  </a>
 </p>
 
 ---
@@ -134,6 +142,79 @@ The results will be save into "./results" folder.
 More experimental results and quantitative comparisons can be found in our paper.
 
 ---
+
+---
+
+## 🌍 DCVerse Benchmark
+
+### Download
+
+To facilitate fair and reproducible evaluation of depth completion methods, we build **DCVerse**, a unified depth completion benchmark that standardizes the experimental settings across different methods and datasets.
+
+DCVerse addresses inconsistencies commonly found in previous evaluations, including:
+
+- Unified input image resolution
+- Consistent sparse point sampling density
+- Standardized sparse sampling strategies
+- Unified evaluation metrics
+- Cross-dataset evaluation protocol
+
+The benchmark enables more reliable and direct comparisons between different depth completion methods.
+
+The benchmark and processed data can be found at:
+
+👉 [DCVerse on Hugging Face](https://huggingface.co/datasets/Liangyingping/DCVerse)
+
+---
+
+### Usage
+
+```bash
+#!/bin/bash
+
+datasets=(
+    ETH3D_SfM_Indoor_test
+    ETH3D_SfM_Outdoor_test
+    KITTIDC_test_LiDAR_64
+    KITTIDC_test_LiDAR_32
+    KITTIDC_test_LiDAR_16
+    KITTIDC_test_LiDAR_8
+    VOID_sample1500
+    VOID_sample500
+    VOID_sample150
+    NYU_test_500
+    NYU_test_200
+    NYU_test_100
+    NYU_test_50
+)
+
+mkdir -p results
+
+for dataset in "${datasets[@]}"
+do
+    echo "======================================"
+    echo "Running dataset: ${dataset}"
+    echo "======================================"
+
+    python test.py \
+        gpus=[0] \
+        name=PMP_Residual_Norm_ssil_KITTI_${dataset} \
+        ++chpt=PMP_Residual_Norm_ssil_KITTI \
+        net=PMP_Residual_Norm_fast \
+        num_workers=4 \
+        data=UNI \
+        data.testset.mode=test \
+        data.path=../datasets/uniformat_release/${dataset} \
+        test_batch_size=1 \
+        metric=MetricALL \
+        ++save=true \
+        2>&1 | tee "results/${dataset}.log"
+
+done
+
+echo "All tests finished."
+```
+
 
 ## 📝 Citation
 
