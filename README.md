@@ -204,7 +204,7 @@ do
         num_workers=4 \
         data=UNI \
         data.testset.mode=test \
-        data.path=../datasets/uniformat_release/${dataset} \
+        data.path=/PATH-TO-DATA/${dataset} \
         test_batch_size=1 \
         metric=MetricALL \
         ++save=true \

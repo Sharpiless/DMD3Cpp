@@ -1,0 +1,9 @@
+[2026-05-26 14:09:59,321][PMP_Residual_Norm_ssil_KITTI_KITTIDC_test_LiDAR_32][INFO] - device is 7
+[2026-05-26 14:09:59,321][PMP_Residual_Norm_ssil_KITTI_KITTIDC_test_LiDAR_32][INFO] - Random Seed: 0001
+[2026-05-26 14:10:01,160][PMP_Residual_Norm_ssil_KITTI_KITTIDC_test_LiDAR_32][INFO] - num_train = 374, num_test = 749
+[2026-05-26 14:10:48,674][PMP_Residual_Norm_ssil_KITTI_KITTIDC_test_LiDAR_32][INFO] - resume CHECKPOINTS
+[2026-05-26 14:10:57,715][py.warnings][WARNING] - /data6/liangyingping/anaconda3/envs/py10/lib/python3.10/site-packages/torch/nn/functional.py:4102: UserWarning: nn.functional.upsample_nearest is deprecated. Use nn.functional.interpolate instead.
+  warnings.warn("nn.functional.upsample_nearest is deprecated. Use nn.functional.interpolate instead.")
+
+[2026-05-26 14:18:39,698][PMP_Residual_Norm_ssil_KITTI_KITTIDC_test_LiDAR_32][INFO] -  RMSE:0.8951718  MAE:0.2869153  iRMSE:0.0037384  iMAE:0.0014530  REL:0.0172854  D^1:0.9937859  D^2:0.9983179  D^3:0.9995129  D102:0.7988213  D105:0.9437650  D110:0.9775481 
+[2026-05-26 14:18:39,699][PMP_Residual_Norm_ssil_KITTI_KITTIDC_test_LiDAR_32][INFO] - best_metric_ema=0.5947

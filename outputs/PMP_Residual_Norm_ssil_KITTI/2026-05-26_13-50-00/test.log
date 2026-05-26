@@ -1,0 +1,4 @@
+[2026-05-26 13:50:00,823][PMP_Residual_Norm_ssil_KITTI][INFO] - device is 0
+[2026-05-26 13:50:00,824][PMP_Residual_Norm_ssil_KITTI][INFO] - Random Seed: 0001
+[2026-05-26 13:50:03,806][PMP_Residual_Norm_ssil_KITTI][INFO] - num_train = 42949, num_test = 1000
+[2026-05-26 13:51:26,732][PMP_Residual_Norm_ssil_KITTI][INFO] - resume CHECKPOINTS

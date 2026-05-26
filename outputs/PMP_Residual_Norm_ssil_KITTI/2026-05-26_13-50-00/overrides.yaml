@@ -1,0 +1,11 @@
+- gpus=[0]
+- name=PMP_Residual_Norm_ssil_KITTI
+- ++chpt=PMP_Residual_Norm_ssil_KITTI
+- net=PMP_Residual_Norm_fast
+- num_workers=4
+- data=KITTI
+- data.testset.mode=test
+- data.testset.height=352
+- test_batch_size=1
+- metric=RMSE
+- ++save=true

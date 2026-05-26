@@ -1,0 +1,9 @@
+[2026-05-26 13:43:34,203][PMP_Residual_Norm_ssil_KITTI_ETH3D_SfM_Indoor_test][INFO] - device is 7
+[2026-05-26 13:43:34,203][PMP_Residual_Norm_ssil_KITTI_ETH3D_SfM_Indoor_test][INFO] - Random Seed: 0001
+[2026-05-26 13:43:36,396][PMP_Residual_Norm_ssil_KITTI_ETH3D_SfM_Indoor_test][INFO] - num_train = 96, num_test = 193
+[2026-05-26 13:44:01,492][PMP_Residual_Norm_ssil_KITTI_ETH3D_SfM_Indoor_test][INFO] - resume CHECKPOINTS
+[2026-05-26 13:44:20,397][py.warnings][WARNING] - /data6/liangyingping/anaconda3/envs/py10/lib/python3.10/site-packages/torch/nn/functional.py:4102: UserWarning: nn.functional.upsample_nearest is deprecated. Use nn.functional.interpolate instead.
+  warnings.warn("nn.functional.upsample_nearest is deprecated. Use nn.functional.interpolate instead.")
+
+[2026-05-26 13:48:11,600][PMP_Residual_Norm_ssil_KITTI_ETH3D_SfM_Indoor_test][INFO] -  RMSE:3.5804656  MAE:2.3138387  iRMSE:0.1819150  iMAE:0.1319737  REL:0.9585918  D^1:0.4901891  D^2:0.6492965  D^3:0.7692208  D102:0.1683498  D105:0.2563423  D110:0.3430828 
+[2026-05-26 13:48:11,601][PMP_Residual_Norm_ssil_KITTI_ETH3D_SfM_Indoor_test][INFO] - best_metric_ema=0.5947

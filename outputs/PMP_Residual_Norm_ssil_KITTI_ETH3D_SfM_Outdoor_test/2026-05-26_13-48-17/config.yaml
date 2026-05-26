@@ -1,0 +1,100 @@
+optim:
+  _target_: optimizers.AdamW
+  lr: ${lr}
+  weight_decay: 0.05
+  betas:
+  - 0.9
+  - 0.999
+sched:
+  lr:
+    policy:
+      _target_: schedulers.NoiseLR
+      lr_sched: OneCycleLR
+      anneal_strategy: cos
+      epochs: ${nepoch}
+      div_factor: 40.0
+      final_div_factor: 0.1
+      last_epoch: -1
+      max_lr: ${lr}
+      cycle_momentum: true
+      base_momentum: 0.85
+      max_momentum: 0.95
+      pct_start: 0.1
+      noise_pct: 0.1
+      steps_per_epoch: ${sched.lr.steps_per_epoch}
+    iter: true
+    steps_per_epoch:
+      _target_: utils.FloorDiv
+      _args_:
+      - _target_: utils.CeilDiv
+        _args_:
+        - ${data.train_sample_size}
+        - _target_: builtins.len
+          _args_:
+          - ${gpus}
+      - ${train_batch_size}
+data:
+  mean:
+  - 90.995
+  - 96.2278
+  - 94.3213
+  std:
+  - 79.2382
+  - 80.5267
+  - 82.1483
+  train_sample_size: 85898
+  test_sample_size: 1000
+  height: 480
+  width: 640
+  trainset:
+    _target_: datasets.UNI
+    mode: test
+    path: ${data.path}
+    height: ${data.height}
+    width: ${data.width}
+    mean: ${data.mean}
+    std: ${data.std}
+  testset:
+    _target_: datasets.UNI
+    mode: test
+    path: ${data.path}
+    height: ${data.height}
+    width: ${data.width}
+    mean: ${data.mean}
+    std: ${data.std}
+  path: ../datasets/uniformat_release/ETH3D_SfM_Outdoor_test
+  mul_factor: 1.0
+net:
+  name: PMP_Residual_Norm_fast
+  model:
+    _target_: models.Pre_MF_Post_Residual_Norm_fast
+  ema:
+    _target_: models.EMA
+    decay: 0.9999
+  clip:
+    _target_: utils.clip_grad_norm_
+    max_norm: 0.1
+loss:
+  _target_: criteria.MSMSE
+metric:
+  _target_: criteria.MetricALL
+  mul_factor: ${data.mul_factor}
+nepoch: 30
+test_epoch: 25
+test_iter: 1000
+lr: 0.001
+gpus:
+- 7
+train_batch_size: 2
+test_batch_size: 1
+num_workers: 4
+manual_seed: 1
+vis_iter: 100
+start_epoch: 0
+gpu_id: ???
+name: PMP_Residual_Norm_ssil_KITTI_ETH3D_SfM_Outdoor_test
+device:
+  _target_: torch.device
+  device: cuda:${gpu_id}
+chpt: PMP_Residual_Norm_ssil_KITTI
+save: true

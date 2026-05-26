@@ -1,0 +1,4 @@
+[2026-05-26 13:41:46,763][PMP_Residual_Norm_ssil_KITTI_ETH3D_SfM_Indoor_test][INFO] - device is 7
+[2026-05-26 13:41:46,763][PMP_Residual_Norm_ssil_KITTI_ETH3D_SfM_Indoor_test][INFO] - Random Seed: 0001
+[2026-05-26 13:41:48,841][PMP_Residual_Norm_ssil_KITTI_ETH3D_SfM_Indoor_test][INFO] - num_train = 96, num_test = 193
+[2026-05-26 13:42:48,096][PMP_Residual_Norm_ssil_KITTI_ETH3D_SfM_Indoor_test][INFO] - resume CHECKPOINTS

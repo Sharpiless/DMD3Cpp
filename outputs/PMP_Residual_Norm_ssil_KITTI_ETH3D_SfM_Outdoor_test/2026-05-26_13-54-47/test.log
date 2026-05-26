@@ -1,0 +1,9 @@
+[2026-05-26 13:54:47,805][PMP_Residual_Norm_ssil_KITTI_ETH3D_SfM_Outdoor_test][INFO] - device is 7
+[2026-05-26 13:54:47,806][PMP_Residual_Norm_ssil_KITTI_ETH3D_SfM_Outdoor_test][INFO] - Random Seed: 0001
+[2026-05-26 13:54:50,379][PMP_Residual_Norm_ssil_KITTI_ETH3D_SfM_Outdoor_test][INFO] - num_train = 98, num_test = 197
+[2026-05-26 13:56:00,221][PMP_Residual_Norm_ssil_KITTI_ETH3D_SfM_Outdoor_test][INFO] - resume CHECKPOINTS
+[2026-05-26 13:56:12,631][py.warnings][WARNING] - /data6/liangyingping/anaconda3/envs/py10/lib/python3.10/site-packages/torch/nn/functional.py:4102: UserWarning: nn.functional.upsample_nearest is deprecated. Use nn.functional.interpolate instead.
+  warnings.warn("nn.functional.upsample_nearest is deprecated. Use nn.functional.interpolate instead.")
+
+[2026-05-26 14:00:04,272][PMP_Residual_Norm_ssil_KITTI_ETH3D_SfM_Outdoor_test][INFO] -  RMSE:4.8949639  MAE:2.6615567  iRMSE:0.1256676  iMAE:0.0460201  REL:0.4855094  D^1:0.6730864  D^2:0.7966717  D^3:0.8675451  D102:0.3400068  D105:0.4525553  D110:0.5406668 
+[2026-05-26 14:00:04,273][PMP_Residual_Norm_ssil_KITTI_ETH3D_SfM_Outdoor_test][INFO] - best_metric_ema=0.5947

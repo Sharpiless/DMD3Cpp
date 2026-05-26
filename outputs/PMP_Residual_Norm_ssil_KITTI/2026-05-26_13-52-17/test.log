@@ -1,0 +1,8 @@
+[2026-05-26 13:52:17,593][PMP_Residual_Norm_ssil_KITTI][INFO] - device is 7
+[2026-05-26 13:52:17,593][PMP_Residual_Norm_ssil_KITTI][INFO] - Random Seed: 0001
+[2026-05-26 13:52:20,158][PMP_Residual_Norm_ssil_KITTI][INFO] - num_train = 42949, num_test = 1000
+[2026-05-26 13:53:30,347][PMP_Residual_Norm_ssil_KITTI][INFO] - resume CHECKPOINTS
+[2026-05-26 13:53:46,568][py.warnings][WARNING] - /data6/liangyingping/anaconda3/envs/py10/lib/python3.10/site-packages/torch/nn/functional.py:4102: UserWarning: nn.functional.upsample_nearest is deprecated. Use nn.functional.interpolate instead.
+  warnings.warn("nn.functional.upsample_nearest is deprecated. Use nn.functional.interpolate instead.")
+
+[2026-05-26 13:54:28,619][PMP_Residual_Norm_ssil_KITTI][INFO] - best_metric_ema=0.5947

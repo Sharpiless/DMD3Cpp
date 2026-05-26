@@ -1,0 +1,11 @@
+- gpus=[7]
+- name=PMP_Residual_Norm_ssil_KITTI_KITTIDC_test_LiDAR_32
+- ++chpt=PMP_Residual_Norm_ssil_KITTI
+- net=PMP_Residual_Norm_fast
+- num_workers=4
+- data=UNI
+- data.testset.mode=test
+- data.path=../datasets/uniformat_release/KITTIDC_test_LiDAR_32
+- test_batch_size=1
+- metric=MetricALL
+- ++save=true
