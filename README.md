@@ -230,7 +230,7 @@ The current benchmark includes implementations of the following representative d
 
 | Category | Methods |
 |-----------|-----------|
-| Classical Depth Completion | LRRU, VPP4DC, [CompletionFormer](https://github.com/Sharpiless/DMD3Cpp/tree/main/benchmarks/CompletionFormer), ImprovingDC, BP-Net, DepthPrompting, OGNI-DC, DMD³C |
+| Classical Depth Completion | [LRRU](https://github.com/Sharpiless/DMD3Cpp/tree/main/benchmarks/LRRU), [VPP4DC](https://github.com/Sharpiless/DMD3Cpp/tree/main/benchmarks/VPP4DC), [CompletionFormer](https://github.com/Sharpiless/DMD3Cpp/tree/main/benchmarks/CompletionFormer), [ImprovingDC](https://github.com/Sharpiless/DMD3Cpp/tree/main/benchmarks/ImprovingDC), BP-Net, DepthPrompting, OGNI-DC, DMD3C |
 | Zero-shot Models | G2-MD, [Marigold-DC](https://github.com/Sharpiless/DMD3Cpp/tree/main/benchmarks/Marigold-DC), [SPNet](https://github.com/Sharpiless/DMD3Cpp/tree/main/benchmarks/SPNet), OMNI-DC, [PacGDC](https://github.com/Sharpiless/DMD3Cpp/tree/main/benchmarks/PacGDC) |
 | Ours | Coming Soon |
 
@@ -258,5 +258,7 @@ If you find our work useful for your research, please consider citing:
 This project is built upon and inspired by:
 
 - [BP-Net](https://github.com/kakaxi314/BP-Net)
+
+- [OMNI-DC](https://github.com/princeton-vl/OMNI-DC)
 
 We sincerely thank the authors for making their code publicly available.
