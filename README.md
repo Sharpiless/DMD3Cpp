@@ -20,7 +20,7 @@ Official implementation of the CVPR 2025 paper
 ---
 
 <div align="center">
-  <img width="729" src="./assets/image.png" alt="DMD3C Results"/>
+  <img width="800" src="./assets/image.png" alt="DMD3C Results"/>
 </div>
 
 ---
@@ -41,7 +41,7 @@ Depth completion methods often suffer in regions with sparse or missing supervis
 ---
 
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/f24eef8e-5dc2-483a-bb70-67671ff5e4e9" width="100%">
+  <img width="800" src="./assets/vis-kitti.png" alt="DMD3C Results"/>
 </div>
 
 ---
@@ -128,7 +128,7 @@ The results will be save into "./results" folder.
 ---
 
 <div align="center">
-  <img width="729" src="./assets/vis-kitti.png" alt="DMD3C Results"/>
+  <img width="800" src="./assets/0000000000.png" alt="DMD3C Results"/>
 </div>
 
 ---
@@ -231,7 +231,7 @@ The current benchmark includes implementations of the following representative d
 | Category | Methods |
 |-----------|-----------|
 | Classical Depth Completion | LRRU, VPP4DC, CompletionFormer, ImprovingDC, BP-Net, DepthPrompting, OGNI-DC, DMD³C |
-| Zero-shot Models | G2-MD, Marigold-DC, SPNet, OMNI-DC, PacGDC |
+| Zero-shot Models | G2-MD, Marigold-DC, [SPNet](https://github.com/Sharpiless/DMD3Cpp/tree/main/benchmarks/SPNet), OMNI-DC, [PacGDC](https://github.com/Sharpiless/DMD3Cpp/tree/main/benchmarks/PacGDC) |
 | Ours | Coming Soon |
 
 We continuously maintain and extend the benchmark to include newly proposed methods and stronger baselines, providing a unified platform for fair and reproducible depth completion evaluation.
