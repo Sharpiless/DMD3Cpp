@@ -105,7 +105,7 @@ Run the training script:
 bash train.sh
 ```
 
-Our models are trained on 8 GPU workstation with 4 Nvidia GTX 4090 (48G).
+Our models are trained on 8 GPU workstation with Nvidia GTX 4090 (48G).
 
 ### 3. Pretrained Models
 
