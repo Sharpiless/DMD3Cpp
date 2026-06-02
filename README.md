@@ -230,8 +230,8 @@ The current benchmark includes implementations of the following representative d
 
 | Category | Methods |
 |-----------|-----------|
-| Classical Depth Completion | LRRU, VPP4DC, CompletionFormer, ImprovingDC, BP-Net, DepthPrompting, OGNI-DC, DMD³C |
-| Zero-shot Models | G2-MD, Marigold-DC, [SPNet](https://github.com/Sharpiless/DMD3Cpp/tree/main/benchmarks/SPNet), OMNI-DC, [PacGDC](https://github.com/Sharpiless/DMD3Cpp/tree/main/benchmarks/PacGDC) |
+| Classical Depth Completion | LRRU, VPP4DC, [CompletionFormer](https://github.com/Sharpiless/DMD3Cpp/tree/main/benchmarks/CompletionFormer), ImprovingDC, BP-Net, DepthPrompting, OGNI-DC, DMD³C |
+| Zero-shot Models | G2-MD, [Marigold-DC](https://github.com/Sharpiless/DMD3Cpp/tree/main/benchmarks/Marigold-DC), [SPNet](https://github.com/Sharpiless/DMD3Cpp/tree/main/benchmarks/SPNet), OMNI-DC, [PacGDC](https://github.com/Sharpiless/DMD3Cpp/tree/main/benchmarks/PacGDC) |
 | Ours | Coming Soon |
 
 We continuously maintain and extend the benchmark to include newly proposed methods and stronger baselines, providing a unified platform for fair and reproducible depth completion evaluation.

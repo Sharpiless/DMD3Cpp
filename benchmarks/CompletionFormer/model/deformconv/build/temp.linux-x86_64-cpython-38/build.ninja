@@ -1,0 +1,34 @@
+ninja_required_version = 1.3
+cxx = c++
+nvcc = /data6/liangyingping/cu118/bin/nvcc
+
+cflags = -pthread -B /data6/liangyingping/anaconda3/envs/completionformer/compiler_compat -Wl,--sysroot=/ -Wsign-compare -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fPIC -DWITH_CUDA -I/data6/liangyingping/TPAMI-depth/DMD3Cpp/OMNI-DC/CompletionFormer/src/model/deformconv/src -I/data6/liangyingping/anaconda3/envs/completionformer/lib/python3.8/site-packages/torch/include -I/data6/liangyingping/anaconda3/envs/completionformer/lib/python3.8/site-packages/torch/include/torch/csrc/api/include -I/data6/liangyingping/anaconda3/envs/completionformer/lib/python3.8/site-packages/torch/include/TH -I/data6/liangyingping/anaconda3/envs/completionformer/lib/python3.8/site-packages/torch/include/THC -I/data6/liangyingping/cu118/include -I/data6/liangyingping/anaconda3/envs/completionformer/include/python3.8 -c
+post_cflags = -DTORCH_API_INCLUDE_EXTENSION_H '-DPYBIND11_COMPILER_TYPE="_gcc"' '-DPYBIND11_STDLIB="_libstdcpp"' '-DPYBIND11_BUILD_ABI="_cxxabi1011"' -DTORCH_EXTENSION_NAME=DCN -D_GLIBCXX_USE_CXX11_ABI=0 -std=c++14
+cuda_cflags = -DWITH_CUDA -I/data6/liangyingping/TPAMI-depth/DMD3Cpp/OMNI-DC/CompletionFormer/src/model/deformconv/src -I/data6/liangyingping/anaconda3/envs/completionformer/lib/python3.8/site-packages/torch/include -I/data6/liangyingping/anaconda3/envs/completionformer/lib/python3.8/site-packages/torch/include/torch/csrc/api/include -I/data6/liangyingping/anaconda3/envs/completionformer/lib/python3.8/site-packages/torch/include/TH -I/data6/liangyingping/anaconda3/envs/completionformer/lib/python3.8/site-packages/torch/include/THC -I/data6/liangyingping/cu118/include -I/data6/liangyingping/anaconda3/envs/completionformer/include/python3.8 -c
+cuda_post_cflags = -D__CUDA_NO_HALF_OPERATORS__ -D__CUDA_NO_HALF_CONVERSIONS__ -D__CUDA_NO_BFLOAT16_CONVERSIONS__ -D__CUDA_NO_HALF2_OPERATORS__ --expt-relaxed-constexpr --compiler-options ''"'"'-fPIC'"'"'' -DCUDA_HAS_FP16=1 -D__CUDA_NO_HALF_OPERATORS__ -D__CUDA_NO_HALF_CONVERSIONS__ -D__CUDA_NO_HALF2_OPERATORS__ -DTORCH_API_INCLUDE_EXTENSION_H '-DPYBIND11_COMPILER_TYPE="_gcc"' '-DPYBIND11_STDLIB="_libstdcpp"' '-DPYBIND11_BUILD_ABI="_cxxabi1011"' -DTORCH_EXTENSION_NAME=DCN -D_GLIBCXX_USE_CXX11_ABI=0 -gencode=arch=compute_86,code=compute_86 -gencode=arch=compute_86,code=sm_86 -std=c++14
+ldflags = 
+
+rule compile
+  command = $cxx -MMD -MF $out.d $cflags -c $in -o $out $post_cflags
+  depfile = $out.d
+  deps = gcc
+
+rule cuda_compile
+  depfile = $out.d
+  deps = gcc
+  command = $nvcc  $cuda_cflags -c $in -o $out $cuda_post_cflags
+
+
+
+build /data6/liangyingping/TPAMI-depth/DMD3Cpp/OMNI-DC/CompletionFormer/src/model/deformconv/build/temp.linux-x86_64-cpython-38/data6/liangyingping/TPAMI-depth/DMD3Cpp/OMNI-DC/CompletionFormer/src/model/deformconv/src/cpu/deform_cpu.o: compile /data6/liangyingping/TPAMI-depth/DMD3Cpp/OMNI-DC/CompletionFormer/src/model/deformconv/src/cpu/deform_cpu.cpp
+build /data6/liangyingping/TPAMI-depth/DMD3Cpp/OMNI-DC/CompletionFormer/src/model/deformconv/build/temp.linux-x86_64-cpython-38/data6/liangyingping/TPAMI-depth/DMD3Cpp/OMNI-DC/CompletionFormer/src/model/deformconv/src/cpu/deform_psroi_pooling_cpu.o: compile /data6/liangyingping/TPAMI-depth/DMD3Cpp/OMNI-DC/CompletionFormer/src/model/deformconv/src/cpu/deform_psroi_pooling_cpu.cpp
+build /data6/liangyingping/TPAMI-depth/DMD3Cpp/OMNI-DC/CompletionFormer/src/model/deformconv/build/temp.linux-x86_64-cpython-38/data6/liangyingping/TPAMI-depth/DMD3Cpp/OMNI-DC/CompletionFormer/src/model/deformconv/src/cpu/modulated_deform_cpu.o: compile /data6/liangyingping/TPAMI-depth/DMD3Cpp/OMNI-DC/CompletionFormer/src/model/deformconv/src/cpu/modulated_deform_cpu.cpp
+build /data6/liangyingping/TPAMI-depth/DMD3Cpp/OMNI-DC/CompletionFormer/src/model/deformconv/build/temp.linux-x86_64-cpython-38/data6/liangyingping/TPAMI-depth/DMD3Cpp/OMNI-DC/CompletionFormer/src/model/deformconv/src/cuda/deform_conv_cuda.o: cuda_compile /data6/liangyingping/TPAMI-depth/DMD3Cpp/OMNI-DC/CompletionFormer/src/model/deformconv/src/cuda/deform_conv_cuda.cu
+build /data6/liangyingping/TPAMI-depth/DMD3Cpp/OMNI-DC/CompletionFormer/src/model/deformconv/build/temp.linux-x86_64-cpython-38/data6/liangyingping/TPAMI-depth/DMD3Cpp/OMNI-DC/CompletionFormer/src/model/deformconv/src/cuda/deform_psroi_pooling_cuda.o: cuda_compile /data6/liangyingping/TPAMI-depth/DMD3Cpp/OMNI-DC/CompletionFormer/src/model/deformconv/src/cuda/deform_psroi_pooling_cuda.cu
+build /data6/liangyingping/TPAMI-depth/DMD3Cpp/OMNI-DC/CompletionFormer/src/model/deformconv/build/temp.linux-x86_64-cpython-38/data6/liangyingping/TPAMI-depth/DMD3Cpp/OMNI-DC/CompletionFormer/src/model/deformconv/src/cuda/modulated_deform_conv_cuda.o: cuda_compile /data6/liangyingping/TPAMI-depth/DMD3Cpp/OMNI-DC/CompletionFormer/src/model/deformconv/src/cuda/modulated_deform_conv_cuda.cu
+build /data6/liangyingping/TPAMI-depth/DMD3Cpp/OMNI-DC/CompletionFormer/src/model/deformconv/build/temp.linux-x86_64-cpython-38/data6/liangyingping/TPAMI-depth/DMD3Cpp/OMNI-DC/CompletionFormer/src/model/deformconv/src/vision.o: compile /data6/liangyingping/TPAMI-depth/DMD3Cpp/OMNI-DC/CompletionFormer/src/model/deformconv/src/vision.cpp
+
+
+
+
+
