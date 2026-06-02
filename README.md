@@ -128,7 +128,7 @@ The results will be save into "./results" folder.
 ---
 
 <div align="center">
-  <img width="729" src="./assets/0000000000.png" alt="DMD3C Results"/>
+  <img width="729" src="./assets/vis-kitti.png" alt="DMD3C Results"/>
 </div>
 
 ---
@@ -231,8 +231,7 @@ The current benchmark includes implementations of the following representative d
 | Category | Methods |
 |-----------|-----------|
 | Classical Depth Completion | LRRU, VPP4DC, CompletionFormer, ImprovingDC, BP-Net, DepthPrompting, OGNI-DC, DMD³C |
-| Monocular Foundation Models | Depth Pro, Depth Anything V2, Marigold |
-| Recent State-of-the-Art | G2-MD, Marigold-DC, SPNet, OMNI-DC, PacGDC |
+| Zero-shot Models | G2-MD, Marigold-DC, SPNet, OMNI-DC, PacGDC |
 | Ours | Coming Soon |
 
 We continuously maintain and extend the benchmark to include newly proposed methods and stronger baselines, providing a unified platform for fair and reproducible depth completion evaluation.
