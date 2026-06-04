@@ -204,24 +204,6 @@ done
 echo "All tests finished."
 ```
 
-## 🌍 DCVerse Benchmark
-
-### Benchmark Implementations
-
-In addition to providing the benchmark datasets, DCVerse also includes standardized evaluation code for a diverse set of representative depth completion methods.
-
-Existing depth completion approaches are often released with different preprocessing procedures, image resolutions, sparse sampling strategies, and evaluation pipelines. These inconsistencies make direct comparisons difficult and may lead to unfair conclusions. To address this issue, we carefully adapted the official implementations of existing methods into a unified evaluation framework while preserving their original architectures and inference procedures as much as possible.
-
-For each method, we standardized:
-
-- Input image resolution
-- Sparse depth generation and sampling strategies
-- Data preprocessing pipeline
-- Evaluation metrics
-- Cross-dataset testing protocol
-
-This enables all methods to be evaluated under identical settings with minimal impact on their original performance, providing a fair and reproducible benchmark for future research.
-
 The adapted implementations are available in the `benchmarks/` directory.
 
 ### Supported Methods
