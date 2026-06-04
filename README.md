@@ -212,7 +212,7 @@ The current benchmark includes implementations of the following representative d
 
 | Category | Methods |
 |-----------|-----------|
-| Classical Depth Completion | [LRRU](https://github.com/Sharpiless/DMD3Cpp/tree/main/benchmarks/LRRU), [VPP4DC](https://github.com/Sharpiless/DMD3Cpp/tree/main/benchmarks/VPP4DC), [CompletionFormer](https://github.com/Sharpiless/DMD3Cpp/tree/main/benchmarks/CompletionFormer), [ImprovingDC](https://github.com/Sharpiless/DMD3Cpp/tree/main/benchmarks/ImprovingDC), BP-Net, DepthPrompting, OGNI-DC, DMD3C |
+| Classical Depth Completion | [LRRU](https://github.com/Sharpiless/DMD3Cpp/tree/main/benchmarks/LRRU), [VPP4DC](https://github.com/Sharpiless/DMD3Cpp/tree/main/benchmarks/VPP4DC), [CompletionFormer](https://github.com/Sharpiless/DMD3Cpp/tree/main/benchmarks/CompletionFormer), [ImprovingDC](https://github.com/Sharpiless/DMD3Cpp/tree/main/benchmarks/ImprovingDC), [BP-Net](https://github.com/Sharpiless/DMD3Cpp/tree/main/benchmarks/BP-Net), DepthPrompting, [OGNI-DC](https://github.com/Sharpiless/DMD3Cpp/tree/main/benchmarks/OGNI-DC), [DMD3C](https://github.com/Sharpiless/DMD3Cpp/tree/main/benchmarks/BP-Net) |
 | Zero-shot Models | [G2-MD](https://github.com/Sharpiless/DMD3Cpp/tree/main/benchmarks/G2-MD), [Marigold-DC](https://github.com/Sharpiless/DMD3Cpp/tree/main/benchmarks/Marigold-DC), [SPNet](https://github.com/Sharpiless/DMD3Cpp/tree/main/benchmarks/SPNet), OMNI-DC, [PacGDC](https://github.com/Sharpiless/DMD3Cpp/tree/main/benchmarks/PacGDC) |
 | Ours | Coming Soon |
 
