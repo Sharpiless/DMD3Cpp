@@ -20,7 +20,15 @@ Official implementation of the CVPR 2025 paper
 ---
 
 <div align="center">
-  <img width="800" src="./assets/image.png" alt="DMD3C Results"/>
+  <a href="https://www.cvlibs.net/datasets/kitti/eval_depth.php?benchmark=depth_completion" target="_blank">
+    <img width="800" src="./assets/image.png" alt="DMD3C KITTI Benchmark Results"/>
+  </a>
+  <br>
+  <sub>
+    <a href="https://www.cvlibs.net/datasets/kitti/eval_depth.php?benchmark=depth_completion">
+      Url: KITTI Depth Completion Benchmark
+    </a>
+  </sub>
 </div>
 
 ---
