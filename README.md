@@ -171,6 +171,12 @@ The benchmark and processed data can be found at:
 datasets=(
     ETH3D_SfM_Indoor_test
     ETH3D_SfM_Outdoor_test
+    VKITTI2_clone
+    VKITTI2_fog
+    VKITTI2_morning
+    VKITTI2_overcast
+    VKITTI2_rain
+    VKITTI2_sunset
     KITTIDC_test_LiDAR_64
     KITTIDC_test_LiDAR_32
     KITTIDC_test_LiDAR_16
@@ -182,6 +188,9 @@ datasets=(
     NYU_test_200
     NYU_test_100
     NYU_test_50
+    iBims_test_LiDAR_32
+    ARKitScenes_test_300
+    DIODE_Indoor_test_300
     DDAD_val
 )
 
